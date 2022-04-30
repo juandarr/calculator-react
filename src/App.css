@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
+#root {
+  width:100%;
+  height: 100vh;
+  font-family: 'Press Start 2P', cursive;
+  background-color: gray;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#calculator {
+  width: 75vmin;
+  border: 2px solid black;
+  background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#screen {
+  font-size: 5vmin;
+  height: 20vh;
+  background-color: black;
+  width: 70vmin;
   color: white;
+  margin:0.5em ;
+  padding: 0em 0.2em 0em 0.2em;
 }
 
-.App-link {
-  color: #61dafb;
+.formula-screen {
+  font-size: 3vmin;
+  color: #32dfcf;
+  width: 100%;
+  /*overflow: scroll;*/
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#display {
+  width: 100%;
+  /*overflow: scroll;*/
+}
+
+#answer {
+  font-size: 2vmin;
+  color: green;
+  width: 100%;
+}
+
+#keyPad {
+  width: 70vmin;
+  height: 70vmin;
+  font-size:4vmin;
+  display:grid;
+  margin-bottom: 0.5em;
+}
+
+button {
+  font-family: 'Press Start 2P', cursive;
+}
+
+button:hover {
+  color: #32dfcf;
+  background-color: black;
+  border: 2px solid orange;
+}
+
+@media (max-height: 230px){
+  #root {
+    height: 230px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  #calculator {
+    width: 172.5px;
   }
+  #screen{
+    font-size: 11.5px;
+    width: 161px;
+    height: 46px;
+  }
+  
+  .formula-screen {
+    font-size: 9.2px;
+  }
+  
+  #keyPad {
+    font-size: 9.2px;
+    width: 161px;
+    height:161px;
+  }
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/pressstart2p/v9/e3t4euO8T-267oIAQAu6jDQyK3nYivN04w.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/pressstart2p/v9/e3t4euO8T-267oIAQAu6jDQyK3nRivN04w.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/pressstart2p/v9/e3t4euO8T-267oIAQAu6jDQyK3nWivN04w.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/pressstart2p/v9/e3t4euO8T-267oIAQAu6jDQyK3nbivN04w.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/pressstart2p/v9/e3t4euO8T-267oIAQAu6jDQyK3nVivM.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
