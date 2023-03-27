@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Quicks start
+## Quick start
 
 First of all, you need to install `react-scripts`. Use `yarn add react-script`. Once the package has been installed locally, you will be able to run the app with `yarn start`.
 
