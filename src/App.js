@@ -17,10 +17,10 @@ const codeToPad = {
 };
 
 class Display extends React.Component {
-
+//style="-webkit-app-region: drag"
   render() {
     return (<div id="screen" className="d-flex flex-column justify-content-evenly align-items-end">
-      <div id="answer" className="d-flex justify-content-start">Out: {parseFloat(parseFloat(this.props.output).toFixed(4))}</div>
+      <div id="answer" className="d-flex justify-content-start" >Out: {parseFloat(parseFloat(this.props.output).toFixed(4))}</div>
       <div className="formula-screen d-flex justify-content-end">{this.props.formula}</div>
       <div id="display" className="output-screen d-flex justify-content-end">{['+', '-', '*', '/'].includes(this.props.display) ? this.props.display : parseFloat(parseFloat(this.props.display).toFixed(4))}</div>
     </div>);
